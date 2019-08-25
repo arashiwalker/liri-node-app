@@ -1,7 +1,7 @@
 {
   "name": "liri-node-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "#### _LIRI Bot, 8/24/2019_",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/arashiwalker/liri-node-app/issues"
   },
-  "homepage": "https://github.com/arashiwalker/liri-node-app#readme"
+  "homepage": "https://github.com/arashiwalker/liri-node-app#readme",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
 }
