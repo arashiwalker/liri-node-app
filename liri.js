@@ -2,12 +2,13 @@ require("dotenv").config();
 var fs = require("fs");
 var request = require("request");
 var keys = require("./keys.js");
-var bandsintown = require('bandsintown');
-var spotify = require('node-spotify-api');
+var axios = require("axios");
+var moment = require("moment");
+var spotify = require("node-spotify-api");
 var spotify = new spotify(keys.spotify);
-var dateFormat = require('dateformat');
+var dateFormat = require("dateformat");
 var now = new Date();
-var SimpleNodeLogger = require('simple-node-logger'),
+var SimpleNodeLogger = require("simple-node-logger"),
     opts = {
         logFilePath:'log.txt',
         timestampFormat:' '
@@ -22,15 +23,12 @@ switch (action) {
     case "concert-this":
         concertThis();
         break;
-
     case "spotify-this-song":
         spotifyThisSong();
         break;
-
     case "movie-this":
         movieThis();
         break;
-
     case "do-what-it-says":
         BBoys();
         break;
@@ -43,8 +41,8 @@ function concertThis() {
    };
     var queryUrl = "https://rest.bandsintown.com/artists/" + userInput + "/events?app_id=codingbootcamp";
     request(queryUrl, function (err, response, body) {
-            log.info("Name of the venue: " + 
-            log.info("Venue location: " + 
+            log.info("Name of the venue: " + data[0].venue.name );
+            // log.info("Venue location: " + 
             // log.info("Date of the Event: " + dateFormat(now, "dddd, mmmm dS, yyyy, h:MM:ss TT");
     });
 };
@@ -55,7 +53,6 @@ function spotifyThisSong() {
    };
     spotify.search({ type: 'track', query: userInput }, function(err, data) {
         var data = data.tracks.items
-        log.info("========================")
         log.info("The Artist is: " + data[0].artists[0].name);
         log.info("The song title is: " + data[0].name);
         log.info("Preview Link: " + data[0].preview_url);
