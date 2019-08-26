@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/arashiwalker/liri-node-app#readme",
   "dependencies": {
+    "dateformat": "^3.0.3",
     "request": "^2.88.0"
   }
 }
