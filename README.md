@@ -73,7 +73,7 @@ _Arashi walker - phone (123)123-1234 - email arashiwalker@gmail.com_
 
 ## Technologies Used
 
-_Node.js,_ _JavaScript,_ _Jquery-3.3.1,_ _Node-Spotify-API,_ _Node-Spotify-API,_ _Moment,_ _DotEnv_
+_Node.js,_ _JavaScript,_ _OMDB-API,_ _Node-Spotify-API,_ _Node-Spotify-API,_ _Moment,_ _DotEnv,_ _Axios,_ _simple-node-logger_
 
 
 ### License
