@@ -11,8 +11,7 @@
 
 ## _LIRI Bot Demo_
 
-<img src="https://thumbs.gfycat.com/DownrightDefinitiveHorseshoebat-size_restricted.gif" width="600" height="500" />
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/Sq3zbig3Wk0&feature/0.jpg)](http://www.youtube.com/watch?v=Sq3zbig3Wk0&feature)
+[![](http://img.youtube.com/vi/Sq3zbig3Wk0/0.jpg)](http://www.youtube.com/watch?v=Sq3zbig3Wk0 "")
 
 ## functions/features
 
