@@ -11,7 +11,8 @@
 
 
 
-![Alt Text](https://imgur.com/7rUtafY.gif)
+<img src="https://imgur.com/7rUtafY.gif" width="160" height="160" />
+
 
 ## functions/features
 
