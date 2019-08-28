@@ -11,7 +11,7 @@
 
 
 
-<img src="https://imgur.com/7rUtafY.gif" width="160" height="160" />
+<img src="https://i.imgur.com/7rUtafY.mp4" width="160" height="160" />
 
 
 ## functions/features
