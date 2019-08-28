@@ -6,7 +6,6 @@ var axios = require("axios");
 var moment = require("moment");
 var spotify = require("node-spotify-api");
 var spotify = new spotify(keys.spotify);
-var dateFormat = require("dateformat");
 var now = new Date();
 var SimpleNodeLogger = require("simple-node-logger"),
     opts = {
@@ -37,13 +36,14 @@ switch (action) {
 
 function concertThis() {
     if( !userInput ){
-        userInput = "Carbi B"
+        userInput = "Cardi B"
    };
     var queryUrl = "https://rest.bandsintown.com/artists/" + userInput + "/events?app_id=codingbootcamp";
-    request(queryUrl, function (err, response, body) {
-            log.info("Name of the venue: " + data[0].venue.name );
-            // log.info("Venue location: " + 
-            // log.info("Date of the Event: " + dateFormat(now, "dddd, mmmm dS, yyyy, h:MM:ss TT");
+    request(queryUrl, function (err, response, data) {
+            log.info("Name of the Venue: " + JSON.parse(data)[0].venue.name);
+            log.info("Name of the Location: " + JSON.parse(data)[1].venue.country);
+            log.info("Date of the Event: " + JSON.parse(data)[0].datetime);
+            log.info("========================================");         
     });
 };
 
@@ -56,7 +56,8 @@ function spotifyThisSong() {
         log.info("The Artist is: " + data[0].artists[0].name);
         log.info("The song title is: " + data[0].name);
         log.info("Preview Link: " + data[0].preview_url);
-        log.info("The album title is: " +data[0].album.name);          
+        log.info("The album title is: " +data[0].album.name);  
+        log.info("========================================");          
     });
  };
 
@@ -74,6 +75,7 @@ function movieThis() {
             log.info("Language of the movie: " + JSON.parse(body).Language);
             log.info("Plot of the movie: " + JSON.parse(body).Plot);
             log.info("Actors in the movie: " + JSON.parse(body).Actors);
+            log.info("========================================");  
     });
 };
 
@@ -82,6 +84,7 @@ function BBoys() {
         data = data.split(",");
         action = data[0];
         userInput = data[1];
+        log.info("========================================");  
         run();
     });
 };
